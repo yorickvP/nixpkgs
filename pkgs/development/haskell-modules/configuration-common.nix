@@ -928,6 +928,7 @@ self: super: {
 
   # aarch64 and armv7l fixes.
   happy = if (pkgs.stdenv.hostPlatform.isAarch32 || pkgs.stdenv.hostPlatform.isAarch64) then dontCheck super.happy else super.happy; # Similar to https://ghc.haskell.org/trac/ghc/ticket/13062
+  happy_1_19_9 = dontCheck (super.callHackage "happy" "1.19.9" {});
   hashable = if (pkgs.stdenv.hostPlatform.isAarch32 || pkgs.stdenv.hostPlatform.isAarch64) then dontCheck super.hashable else super.hashable; # https://github.com/tibbe/hashable/issues/95
   servant-docs =
     let

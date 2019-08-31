@@ -23,7 +23,8 @@ let
   passthru = {
     configuredSrc = callPackage ./configured-ghcjs-src.nix {
       inherit ghcjsSrc;
-      inherit (bootPkgs) ghc alex happy;
+      inherit (bootPkgs) ghc alex;
+      happy = bootPkgs.happy_1_19_9;
     };
     genStage0 = callPackage ./mk-stage0.nix { inherit (passthru) configuredSrc; };
     bootPkgs = bootPkgs.extend (lib.foldr lib.composeExtensions (_:_:{}) [
@@ -34,7 +35,8 @@ let
 
       (callPackage ./common-overrides.nix {
         inherit haskellLib;
-        inherit (bootPkgs) alex happy;
+        inherit (bootPkgs) alex;
+        happy = bootPkgs.happy_1_19_9;
       })
       ghcjsDepOverrides
     ]);
