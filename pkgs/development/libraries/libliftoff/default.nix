@@ -5,14 +5,14 @@
 
 stdenv.mkDerivation rec {
   pname = "libliftoff";
-  version = "0.2.0";
+  version = "0.3.0";
 
   src = fetchFromGitLab {
     domain = "gitlab.freedesktop.org";
     owner = "emersion";
     repo = pname;
-    rev = "v${version}";
-    sha256 = "1ysxm7kg1gwrsn29lw8kngvkxp46g4m2pvbwcvscgvr54ikirn4q";
+    rev = "ac919002ca2e099a07da25a385c24c0f4480302e";
+    sha256 = "sha256-lx1hTkZgqwY/ffzL4DqZdLVHDgNZpalZmUNNtik19xw=";
   };
 
   nativeBuildInputs = [ meson pkg-config ninja ];
