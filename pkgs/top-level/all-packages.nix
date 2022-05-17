@@ -26215,6 +26215,10 @@ with pkgs;
 
   fvwm = callPackage ../applications/window-managers/fvwm { };
 
+  gamescope = callPackage ../applications/window-managers/gamescope {
+    wlroots = wlroots_0_15;
+  };
+
   ganttproject-bin = callPackage ../applications/misc/ganttproject-bin { };
 
   gaucheBootstrap = callPackage ../development/interpreters/gauche/boot.nix { };
