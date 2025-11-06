@@ -728,6 +728,18 @@ rec {
       abi = "n32";
     };
 
+    # Fil-C: Memory-safe C/C++ with GIMSO (Garbage In, Memory Safety Out)
+    filc = {
+      assertions = [
+        {
+          assertion = platform: platform.isLinux && platform.isx86_64;
+          message = ''
+            Fil-C currently only supports x86_64-linux.
+          '';
+        }
+      ];
+    };
+
     gnuabielfv2 = {
       abi = "elfv2";
     };

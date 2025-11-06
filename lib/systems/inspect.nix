@@ -397,6 +397,9 @@ rec {
         muslabin32
         muslabi64
       ];
+    isFilc = {
+      abi = abis.filc;
+    };
     isUClibc =
       with abis;
       map (a: { abi = a; }) [

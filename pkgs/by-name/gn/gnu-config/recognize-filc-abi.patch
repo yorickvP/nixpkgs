@@ -1,0 +1,10 @@
+--- a/config.sub
++++ b/config.sub
+@@ -1828,7 +1828,7 @@ case $kernel-$os-$obj in
+ 	linux-gnu*- | linux-android*- | linux-dietlibc*- | linux-llvm*- \
+-		    | linux-mlibc*- | linux-musl*- | linux-newlib*- \
++		    | linux-filc*- | linux-mlibc*- | linux-musl*- | linux-newlib*- \
+ 		    | linux-relibc*- | linux-uclibc*- )
+ 		;;
+ 	uclinux-uclibc*- )
+
