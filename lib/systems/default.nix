@@ -286,6 +286,7 @@ let
             || isMinGW
             || isWindows # Windows
             || isWasm # WASM
+            || isFilc # Fil-C
           )
           && !isStatic;
 
