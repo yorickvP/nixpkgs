@@ -1,10 +1,29 @@
 --- a/config.sub
 +++ b/config.sub
-@@ -1828,7 +1828,7 @@ case $kernel-$os-$obj in
+@@ -1723,7 +1723,7 @@
+
+ case $os in
+ 	# Sometimes we do "kernel-libc", so those need to count as OSes.
+-	llvm* | musl* | newlib* | relibc* | uclibc*)
++	llvm* | gnufilc* | musl* | newlib* | relibc* | uclibc*)
+ 		;;
+ 	# Likewise for "kernel-abi"
+ 	eabi* | gnueabi*)
+@@ -1828,7 +1828,7 @@
+ # (given a valid OS), if there is a kernel.
+ case $kernel-$os-$obj in
  	linux-gnu*- | linux-android*- | linux-dietlibc*- | linux-llvm*- \
 -		    | linux-mlibc*- | linux-musl*- | linux-newlib*- \
-+		    | linux-filc*- | linux-mlibc*- | linux-musl*- | linux-newlib*- \
++		    | linux-gnufilc*- | linux-mlibc*- | linux-musl*- | linux-newlib*- \
  		    | linux-relibc*- | linux-uclibc*- )
  		;;
  	uclinux-uclibc*- )
-
+@@ -1837,7 +1837,7 @@
+ 		;;
+ 	windows*-msvc*-)
+ 		;;
+-	-dietlibc*- | -llvm*- | -mlibc*- | -musl*- | -newlib*- | -relibc*- \
++	-dietlibc*- | -llvm*- | -gnufilc*- | -mlibc*- | -musl*- | -newlib*- | -relibc*- \
+ 		    | -uclibc*- )
+ 		# These are just libc implementations, not actual OSes, and thus
+ 		# require a kernel.
