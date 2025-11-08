@@ -729,7 +729,7 @@ rec {
     };
 
     # Fil-C: Memory-safe C/C++ with GIMSO (Garbage In, Memory Safety Out)
-    gnufilc = {
+    gnufilc0 = {
       assertions = [
         {
           assertion = platform: platform.isLinux && platform.isx86_64;

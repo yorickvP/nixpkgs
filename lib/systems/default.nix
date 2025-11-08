@@ -164,7 +164,7 @@ let
           else if final.isRedox then
             "relibc"
           else if final.isFilc then
-            "gnufilc"
+            "gnufilc0"
           else if final.isMusl then
             "musl"
           else if final.isUClibc then

@@ -6091,12 +6091,12 @@ with pkgs;
       relibc
     else if libc == "llvm" then
       llvmPackages_20.libc
-    else if libc == "gnufilc" then
-      gnufilc
+    else if libc == "gnufilc0" then
+      gnufilc0
     else
       throw "Unknown libc ${libc}";
 
-  gnufilc = throw "gnufilc must be provided through overlay";
+  gnufilc0 = throw "gnufilc0 must be provided through overlay";
 
   threads =
     lib.optionalAttrs (stdenv.hostPlatform.isMinGW && !(stdenv.hostPlatform.useLLVM or false))
