@@ -37,7 +37,7 @@ stdenv.mkDerivation {
     runHook postUnpack
   '';
 
-  patches = [
+  patches = lib.optionals (lib.hasInfix "gnufilc" stdenv.hostPlatform.config) [
     ./recognize-filc-abi.patch
   ];
 
